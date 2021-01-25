@@ -19,6 +19,7 @@ class PostListSerializer(serializers.ModelSerializer):
 
 class PostDetailSerializer(serializers.ModelSerializer):
     username = serializers.SerializerMethodField()
+
     class Meta:
         model = Post
         fields = [
@@ -29,8 +30,6 @@ class PostDetailSerializer(serializers.ModelSerializer):
             'username',
             'created_at'
         ]
-
-
 
     def get_username(self, obj):
         return str(obj.user.username)

@@ -22,11 +22,11 @@ class PostCreateAPIView(CreateAPIView):
     serializer_class = PostCreateSerializer
     permission_classes = [IsOwner]
 
-    def create(self, request, *args, **kwargs):
-        pass
-
-    def validate_title(self, value):
-        pass
+    # def create(self, request, *args, **kwargs):
+    #     pass
+    #
+    # def validate_title(self, value):
+    #     pass
 
 
 class PostUpdateAPIView(UpdateAPIView):
@@ -34,11 +34,11 @@ class PostUpdateAPIView(UpdateAPIView):
     serializer_class = PostDetailSerializer
     lookup_field = 'id'
 
-    def update(self, request, *args, **kwargs):
-        pass
-
-    def validate_title(self, value):
-        pass
+    # def update(self, request, *args, **kwargs):
+    #     pass
+    #
+    # def validate_title(self, value):
+    #     pass
 
 
 class PostDeleteAPIView(DestroyAPIView):
